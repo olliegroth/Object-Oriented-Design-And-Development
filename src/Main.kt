@@ -17,4 +17,6 @@ fun main () {
     }
     println(ozzy.toString())
 
+    val jed = Student(1, "Jed", "D&TS", 90.0)
+
 }
