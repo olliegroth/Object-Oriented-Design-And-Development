@@ -26,36 +26,93 @@ fun main () {
 //    println("Grade: ${jed.getGrade()}")
 //    println("Passed: ${jed.didPass()}")
 
-    val students = mutableListOf<Student>()
+//    val students = mutableListOf<Student>()
+//
+//    var moreStudents = true
+//    var idCounter = 0
+//
+//    while (moreStudents) {
+//        idCounter++
+//        println("Enter the name of student $idCounter: ")
+//        val name = readln()
+//        println("Enter the course for $name: ")
+//        val course = readln()
+//
+//        val student = Student(idCounter, name, course)
+//
+//        println("Enter the mark for $name: ")
+//        val inputMark = readln().toDouble()
+//        student.mark = inputMark
+//
+//        students.add(student)
+//
+//        println("Do you want to enter another student? (y/n)")
+//        val response = readln()
+//        if (response.lowercase() != "y") {
+//            moreStudents = false
+//        }
+//    }
+//    println("\nStudent List:")
+//    for (student in students) {
+//        println("ID: ${student.id}, Name: ${student.name}, Course: ${student.course}")
+//        println("Mark: ${student.mark}, Grade: ${student.getGrade()}, Passed: ${student.didPass()}")
+//        println("--------------------------------")
+//    }
 
-    var moreStudents = true
-    var idCounter = 0
+    val university = University()
+    var choice: String
 
-    while (moreStudents) {
-        idCounter++
-        println("Enter the name of student $idCounter: ")
-        val name = readln()
-        println("Enter the course for $name: ")
-        val course = readln()
+    do {
+        println("Menu:")
+        println("1. Add a student")
+        println("2. Search for student by ID")
+        println("3. Search for students by name")
+        println("4. Quit")
+        print("Enter your choice: ")
+        choice = readln()
 
-        val student = Student(idCounter, name, course)
-
-        println("Enter the mark for $name: ")
-        val inputMark = readln().toDouble()
-        student.mark = inputMark
-
-        students.add(student)
-
-        println("Do you want to enter another student? (y/n)")
-        val response = readln()
-        if (response.lowercase() != "y") {
-            moreStudents = false
+        when (choice) {
+            "1" -> {
+                println("Enter student name: ")
+                val name = readln()
+                println("Enter student course: ")
+                val course = readln()
+                println("Enter student mark: ")
+                val mark = readln().toDouble()
+                val student = Student(university.students.size + 1, name, course)
+                student.mark = mark
+                university.enrolStudent(student)
+                println("Student added successfully.")
+            }
+            "2" -> {
+                println("Enter student ID: ")
+                val id = readln().toInt()
+                val student = university.findStudentById(id)
+                if (student != null) {
+                    println("Student found: $student")
+                } else {
+                    println("Student not found.")
+                }
+            }
+            "3" -> {
+                println("Enter student name: ")
+                val name = readln()
+                val students = university.findStudentsByName(name)
+                if (students.isNotEmpty()) {
+                    println("Students found:")
+                    for (student in students) {
+                        println(student)
+                    }
+                } else {
+                    println("No students found with that name.")
+                }
+            }
+            "4" -> {
+                println("Exiting...")
+            }
+            else -> {
+                println("Invalid choice. Please try again.")
+            }
         }
-    }
-    println("\nStudent List:")
-    for (student in students) {
-        println("ID: ${student.id}, Name: ${student.name}, Course: ${student.course}")
-        println("Mark: ${student.mark}, Grade: ${student.getGrade()}, Passed: ${student.didPass()}")
-        println("--------------------------------")
-    }
+    } while (choice != "4")
 }
