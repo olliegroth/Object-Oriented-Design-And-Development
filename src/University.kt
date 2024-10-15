@@ -1,5 +1,4 @@
 class University {
-
     val students = mutableListOf<Student>()
 
     fun enrolStudent(student: Student) {
