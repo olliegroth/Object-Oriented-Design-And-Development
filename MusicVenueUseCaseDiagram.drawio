@@ -19,22 +19,22 @@
           <mxGeometry x="135" y="320" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="igBMlUZ_AHUM9BY8_jIY-10" value="Modify an event" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="450" y="200" width="120" height="80" as="geometry" />
+          <mxGeometry x="460" y="240" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="igBMlUZ_AHUM9BY8_jIY-11" value="Book an event" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="330" y="270" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="igBMlUZ_AHUM9BY8_jIY-13" value="Delete an event" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="110" width="120" height="80" as="geometry" />
+          <mxGeometry x="430" y="150" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="igBMlUZ_AHUM9BY8_jIY-14" value="Add an event" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="50" width="120" height="80" as="geometry" />
+          <mxGeometry x="310" y="100" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="igBMlUZ_AHUM9BY8_jIY-15" value="Cancel a booking" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="330" y="360" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="igBMlUZ_AHUM9BY8_jIY-16" value="Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="80" width="120" height="80" as="geometry" />
+          <mxGeometry x="590" y="60" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="igBMlUZ_AHUM9BY8_jIY-18" value="precedes" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="igBMlUZ_AHUM9BY8_jIY-16" target="igBMlUZ_AHUM9BY8_jIY-10">
           <mxGeometry width="160" relative="1" as="geometry">
