@@ -18,4 +18,12 @@ class University {
         }
         return matchingStudents
     }
+
+    fun findPassingStudents(): MutableList<Student> {
+        return students.filter {it.mark >= 40 }.toMutableList()
+    }
+
+    fun getStudentNames(): List<String> {
+        return students.map { it.name }
+    }
 }
